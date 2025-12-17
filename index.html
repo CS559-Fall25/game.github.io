@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Human vs Cows</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container"></div>
+    
+    <div id="ui-layer">
+        <div id="hud">
+            <div class="hud-item">Score: <span id="score">0</span></div>
+            <div class="hud-item">Lives: <span id="lives">3</span></div>
+            <div class="hud-item">
+                <label for="mode-toggle">Mode: </label>
+                <select id="mode-toggle">
+                    <option value="prototype">Prototype (Primitives)</option>
+                    <option value="full">Full (Textured)</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="controls">
+            <div class="control-group">
+                <div class="btn" id="btn-left">←</div>
+                <div class="btn" id="btn-right">→</div>
+            </div>
+            <div class="control-group">
+                <div class="btn" id="btn-thrust">↑</div>
+                <div class="btn" id="btn-shoot">◎</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="start-screen">
+        <h1>Human vs Cows</h1>
+        <p>Use Arrow Keys/WASD to Move, Space to Shoot</p>
+        <p>Or use on-screen controls</p>
+        <button id="start-btn">Start Game</button>
+    </div>
+
+    <!-- Import Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="js/game.js"></script>
+</body>
+</html>

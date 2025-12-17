@@ -1,0 +1,22 @@
+body { margin: 0; overflow: hidden; background-color: #000; color: white; font-family: sans-serif; }
+#game-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+#ui-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+
+/* HUD */
+#hud { padding: 10px; display: flex; justify-content: space-between; pointer-events: auto; }
+.hud-item { background: rgba(0, 0, 0, 0.5); padding: 5px 10px; border-radius: 5px; }
+
+/* Controls */
+#controls { position: absolute; bottom: 20px; width: 100%; display: flex; justify-content: space-between; padding: 0 20px; box-sizing: border-box; pointer-events: auto; }
+.control-group { display: flex; gap: 10px; }
+.btn { width: 60px; height: 60px; background: rgba(255, 255, 255, 0.2); border: 2px solid white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 24px; user-select: none; touch-action: manipulation; cursor: pointer; }
+.btn:active { background: rgba(255, 255, 255, 0.5); }
+
+/* Mode Switch */
+#mode-switch { pointer-events: auto; margin-top: 10px; }
+
+/* Start Screen */
+#start-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; flex-direction: column; justify-content: center; align-items: center; pointer-events: auto; z-index: 10; }
+#start-btn { padding: 15px 30px; font-size: 24px; cursor: pointer; background: #4CAF50; color: white; border: none; border-radius: 5px; margin-top: 20px; }
+
+.hidden { display: none !important; }
